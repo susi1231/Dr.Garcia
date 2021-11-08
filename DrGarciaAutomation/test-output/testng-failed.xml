@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.DrGarcia.UserTestScripts.HomePageTest">
+      <class name="com.DrGarcia.UserTestScripts.SignupUserTest">
         <methods>
-          <include name="logout"/>
-          <include name="userIconNameCheck"/>
+          <include name="closebrowser"/>
+          <include name="signupTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.HomePageTest -->
+      </class> <!-- com.DrGarcia.UserTestScripts.SignupUserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
