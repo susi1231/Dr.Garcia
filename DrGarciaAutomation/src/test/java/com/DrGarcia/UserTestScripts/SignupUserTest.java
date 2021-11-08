@@ -2,38 +2,29 @@ package com.DrGarcia.UserTestScripts;
 
 import java.io.IOException;
 
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.DrGarcia.BasePackage.TestBase;
 import com.DrGarcia.UserPageLibrary.HomePage;
-import com.DrGarcia.UserPageLibrary.LandingPage;
 import com.DrGarcia.UserPageLibrary.Login;
+import com.DrGarcia.UserPageLibrary.SignupUser;
 
+public class SignupUserTest extends TestBase{
+	
 
-
-
-public class LoginPageTest extends TestBase{
-	public LoginPageTest() throws IOException {
+	public SignupUserTest() throws IOException {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	
-	
 
-	public static Login lg1;
+	public static SignupUser sign;
 	HomePage homepage;
-	/*static {
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-	}
-	*/
 	
 	@BeforeMethod
     public void setUp() throws IOException {
     	initialization();
-    	lg1=new Login();
+    	sign=new SignupUser();
     }
 	
 	/*@Test(priority = 1)
@@ -45,7 +36,7 @@ public class LoginPageTest extends TestBase{
 	*/
 	
 	
-	@Test(priority = 1)
+	/*@Test(priority = 1)
 	public void loginTest() throws IOException, InterruptedException {
 		homepage=lg1.login(prop.getProperty("useremail"), prop.getProperty("password"));
 		
@@ -53,7 +44,12 @@ public class LoginPageTest extends TestBase{
 		
 		
 	}
-	
+	*/
+	@Test
+	public void signupTest() throws InterruptedException, IOException {
+		sign.Signup();
+		
+	}
 	
 	
 	
@@ -64,5 +60,4 @@ public class LoginPageTest extends TestBase{
 	public void closebrowser() {
 		//driver.quit();
 	}
-	
 }

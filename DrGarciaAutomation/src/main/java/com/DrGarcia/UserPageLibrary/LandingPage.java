@@ -16,9 +16,11 @@ public class LandingPage extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
     //usericon
-	@FindBy(xpath = "//img[@class='w-75']")
+	@FindBy(xpath = "//div[@class='dropdown']")
 	WebElement userIcon;
+	////img[@class='w-75']
 	////a[@role='button']
+	////a[@class='nav-link page-scroll hidesidebar']  &  //div[@class='dropdown']
 	
 	//3dots
 	@FindBy(xpath = "//a[@class='nav-link page-scroll']/span")

@@ -21,7 +21,7 @@ public class HomePageTest extends TestBase{
 
 	
 	@BeforeMethod
-    public void setUp() throws IOException {
+    public void setUp() throws IOException, InterruptedException {
     	initialization();
     	lg1=new Login();
     	lg1.login(prop.getProperty("useremail"), prop.getProperty("password"));
