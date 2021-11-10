@@ -81,11 +81,43 @@ public class SignupUser extends TestBase {
     @FindBy(xpath = "//a[.='LOGIN']")
     WebElement login;
     
+    //how do u hear about us
+    @FindBy(xpath = "//input[@value='Google']")
+    WebElement google;
+    
+    //Highest education level completed
+    @FindBy(xpath = "//input[@value='Bachelors']")
+    WebElement bachelors;
+    
+  //next button
+    @FindBy(xpath = "//button[@id='nextBtn']")
+    WebElement nextButton3;
+    
+    //Why are you interested in learning about Biomagnetism?
+    @FindBy(xpath = "//textarea[@name='biomagnetism_interest']")
+    WebElement textAreaBiomagnetism;
+    
+    //Something fun to know about you ?
+    @FindBy(xpath = "//textarea[@name='something_fun_to_know']")
+    WebElement textAreaFun;
+    
+    //final submit button
+    @FindBy(xpath = "//button[@id='nextBtn']")
+    WebElement finalSubmit;
+    
+    /*
+    //regester account
+  	@FindBy(xpath = "//a[contains(text(), 'REGISTER')]")
+  	WebElement regester;
+  	*/
+    
     public void Signup() throws InterruptedException, IOException {
-    	lp.user();
-    	log.regester.click();
+    lp.user();
+    //lp.userIcon.click();
+    log.regester.click();
+    	//regester.click();
 	name.sendKeys("Test");
-	emailid.sendKeys("kanisirisusi@gmail.com");
+	emailid.sendKeys("kanisiritest013@gmail.com");
 	phoneNo.sendKeys("9951714865");
 	age.sendKeys("24");
 	password.sendKeys("Sushi@123");
@@ -97,6 +129,12 @@ public class SignupUser extends TestBase {
 	zipCode.sendKeys("523442");
 	country.sendKeys("usa");
 	state.sendKeys("abcd");
-	//nextButton2.click();
+	nextButton2.click();
+	google.click();
+	bachelors.click();
+	nextButton3.click();
+	textAreaBiomagnetism.sendKeys("test purpose");
+	textAreaFun.sendKeys("Test");
+	finalSubmit.click();
 	}
 }

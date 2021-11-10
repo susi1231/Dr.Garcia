@@ -24,7 +24,7 @@ public class LoginPageTest extends TestBase{
 	
 
 	public static Login lg1;
-	HomePage homepage;
+	static HomePage homepage;
 	/*static {
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 	}
@@ -45,7 +45,7 @@ public class LoginPageTest extends TestBase{
 	*/
 	
 	
-	@Test(priority = 1)
+	@Test
 	public void loginTest() throws IOException, InterruptedException {
 		homepage=lg1.login(prop.getProperty("useremail"), prop.getProperty("password"));
 		

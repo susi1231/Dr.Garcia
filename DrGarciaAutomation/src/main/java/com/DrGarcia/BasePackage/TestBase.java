@@ -7,7 +7,10 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class TestBase {
 
@@ -53,7 +56,24 @@ public class TestBase {
 
 	 }
 	 */
-	 
+	
+	public void SelectOption(WebElement element, int index) {
+		Select s=new Select(element);
+		s.selectByIndex(index);
+				
+	}
+	
+	public void SelectOption(WebElement element, String text) {
+		Select s=new Select(element);
+		s.selectByVisibleText(text);
+				
+	}
+	   
+	/*public static void clickById(WebDriver driver, String id) {
+		Actions act=new Actions(driver);
+		act.moveToElement()
+	}
+	*/
 	/*
 	 * Properties
 	 * webdriver

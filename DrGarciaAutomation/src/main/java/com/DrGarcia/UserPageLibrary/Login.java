@@ -1,5 +1,6 @@
 package com.DrGarcia.UserPageLibrary;
 
+import java.awt.peer.LabelPeer;
 import java.io.IOException;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -22,8 +23,9 @@ public class Login extends TestBase {
 	LandingPage lp=new LandingPage();
 	
 	//email
-	@FindBy(xpath = "(//div[@class='col-md-12'])[1]/input")
+	@FindBy(xpath = "//input[@id='email']")
 	WebElement emailType;
+	////input[@id='email']    &     (//div[@class='col-md-12'])[1]/input
 	
 	//password
 	@FindBy(xpath = "//input[@id='password']")
@@ -37,9 +39,12 @@ public class Login extends TestBase {
 	@FindBy(xpath = "//a[contains(text(), 'Forgot Your Password')]")
 	WebElement forgotPassword;
 	
+
 	//regester account
 	@FindBy(xpath = "//a[contains(text(), 'REGISTER')]")
 	WebElement regester;
+
+	
 	
 	//side header
 	@FindBy(xpath = "//h1[.='US BIOMAG']")
@@ -49,11 +54,12 @@ public class Login extends TestBase {
 	@FindBy(xpath = "//img[@alt='Dr Garcia Logo']")
 	WebElement topLogo;
 	
-
+    
 	
 	public HomePage login(String email, String password) throws IOException, InterruptedException{
 		lp.user();
-		Thread.sleep(5000);
+		//lp.userIcon.click();
+		//lp.userIcon.click();
 		/*JavascriptExecutor js = (JavascriptExecutor)driver;
     	js.executeScript("arguments[0].click();", lp.user());
     	*/
