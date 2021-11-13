@@ -36,8 +36,8 @@ public class HomePage extends TestBase {
 	WebElement logout;
 	
 	//checking usericon
-	@FindBy(xpath = "//h4[contains(text(),'Sushi Test')]")
-	WebElement userIconName;
+	@FindBy(xpath = "//h4[contains(text(),'Test')]")
+	WebElement userNameLabel;
 	
 	//going inside myaccount
 	public MyAccount clickOnMyAccount() {
@@ -47,7 +47,7 @@ public class HomePage extends TestBase {
 		
 	}
 	//going inside mycourse
-	public MyCourse clickOnMycourse() {
+	public MyCourse clickOnMycourse() throws IOException {
 		landPage.userIcon.click();
 		myCourse.click();
 		return new MyCourse();
@@ -61,9 +61,9 @@ public class HomePage extends TestBase {
 		
 	}
 	
-	public String checkUserName() {
-		landPage.userIcon.click();
-		return userIconName.getText();	
+	public boolean checkUserName() {
+		//landPage.userIcon.click();
+		return userNameLabel.isDisplayed();	
 	}
 	
 	//checking the title

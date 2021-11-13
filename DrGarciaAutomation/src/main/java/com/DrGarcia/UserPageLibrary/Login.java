@@ -7,14 +7,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Listeners;
 
 import com.DrGarcia.BasePackage.TestBase;
-
+@Listeners(com.DrGarcia.BasePackage.ListenerImplementation.class)
 public class Login extends TestBase {
 
-
-
-	
 	public Login() throws IOException {
 		super();
 		PageFactory.initElements(driver, this);
@@ -23,9 +21,8 @@ public class Login extends TestBase {
 	LandingPage lp=new LandingPage();
 	
 	//email
-	@FindBy(xpath = "//input[@id='email']")
+	@FindBy(xpath = "(//div[@class='col-md-12'])[1]/input")
 	WebElement emailType;
-	////input[@id='email']    &     (//div[@class='col-md-12'])[1]/input
 	
 	//password
 	@FindBy(xpath = "//input[@id='password']")
@@ -74,6 +71,11 @@ public class Login extends TestBase {
 		    	//js.executeScript("arguments[0].click();", loginBtn);
 		    	
 		return new HomePage();
+	}
+	
+	public ForgotPassword forgot() throws IOException {
+		forgotPassword.click();
+		return new ForgotPassword();
 	}
     
 	

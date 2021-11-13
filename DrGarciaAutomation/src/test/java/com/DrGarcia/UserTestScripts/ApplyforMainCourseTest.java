@@ -21,7 +21,6 @@ public class ApplyforMainCourseTest extends TestBase{
 		super();
 		
 	}
-
 	
     public static Payment pay;
     public static CoursePage coursepag;
@@ -41,9 +40,9 @@ public class ApplyforMainCourseTest extends TestBase{
     	lg=new Login();
     }
     
-    @Test
+    @Test(invocationCount = 1)
     public void purchaseCourse() throws IOException, InterruptedException {
-    lp.user();
+    //lp.user();
     //LoginPageTest.loginTest();
     lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
     lp.course();
@@ -55,6 +54,6 @@ public class ApplyforMainCourseTest extends TestBase{
     
     @AfterMethod
     public void close() {
-    	//driver.close();
+    //driver.close();
     }
 }

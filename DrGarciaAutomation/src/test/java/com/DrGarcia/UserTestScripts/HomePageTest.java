@@ -30,8 +30,7 @@ public class HomePageTest extends TestBase{
 	
 	@Test(priority = 1)
 	public void userIconNameCheck() {
-		String userTitle=hp.checkUserName();
-		Assert.assertEquals(userTitle, "Sushi Test");
+		Assert.assertTrue(hp.checkUserName());
 	}
 	 
 	

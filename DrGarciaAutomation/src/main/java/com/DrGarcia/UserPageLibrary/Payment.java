@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import com.DrGarcia.BasePackage.TestBase;
 
@@ -16,7 +17,8 @@ public class Payment extends TestBase {
 		super();
 		PageFactory.initElements(driver, this);
 	}
-	
+	//object of soft assert
+	SoftAssert softAssert=new SoftAssert();
 	//owner name
 	@FindBy(xpath = "//input[@id='owner']")
 	WebElement ownerName;
@@ -46,11 +48,14 @@ public class Payment extends TestBase {
 	////button[@id='confirm-purchase']
 	//button[@class='btn btn-success themeButton']
 	
-	/*
+	
 	@FindBy(xpath = "//h1[.='payment-complete']")
 	WebElement comparePaymentMessage;
 	
-	*/
+	public boolean checkPaymentMessage() {
+		//landPage.userIcon.click();
+		return comparePaymentMessage.isDisplayed();	
+	}
 	
 	public void payment() throws IOException {
 	ownerName.sendKeys("Simon");
@@ -61,8 +66,12 @@ public class Payment extends TestBase {
 	Actions act=new Actions(driver);
 	act.moveToElement(confirmPayment).click().build().perform();
 	//confirmPayment.click();
+    //softAssert.assertEquals(comparePaymentMessage, "payment-complete");
 	//Assert.assertEquals(comparePaymentMessage, "PAYMENT-COMPLETE");
 	//return new ApplyForMainCourse();
+    softAssert.assertTrue(checkPaymentMessage());
+    
+    softAssert.assertAll();
 	}
 	
 

@@ -5,8 +5,10 @@
     <classes>
       <class name="com.DrGarcia.UserTestScripts.SignupUserTest"/>
       <class name="com.DrGarcia.UserTestScripts.LoginPageTest"/>
-      <class name="com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest"/>
+      <class name="com.DrGarcia.UserTestScripts.ForgotPasswordTest"/>
       <class name="com.DrGarcia.UserTestScripts.ApplyforMainCourseTest"/>
+      <class name="com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest"/>
+      <class name="com.DrGarcia.UserTestScripts.WatchSessionTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

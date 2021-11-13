@@ -3,19 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.DrGarcia.UserTestScripts.ApplyforMainCourseTest">
+      <class name="com.DrGarcia.UserTestScripts.WatchSessionTest">
         <methods>
-          <include name="purchaseCourse"/>
           <include name="setUp"/>
-          <include name="close"/>
+          <include name="watch"/>
         </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.ApplyforMainCourseTest -->
-      <class name="com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest">
-        <methods>
-          <include name="purchaseCourse"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest -->
+      </class> <!-- com.DrGarcia.UserTestScripts.WatchSessionTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

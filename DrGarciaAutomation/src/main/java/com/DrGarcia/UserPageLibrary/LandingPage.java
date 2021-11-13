@@ -61,9 +61,9 @@ public class LandingPage extends TestBase{
 		
 	public Login user() throws IOException {
 		Actions act=new Actions(driver);
-		act.moveToElement(userIcon).click().perform();
+		act.moveToElement(userIcon).perform();
+		act.doubleClick(userIcon).perform();
 	    //userIcon.click();
-		//userIcon.click();
 		return new Login();
 	}
 	

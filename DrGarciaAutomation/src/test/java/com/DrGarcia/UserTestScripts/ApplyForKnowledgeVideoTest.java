@@ -29,19 +29,19 @@ public class ApplyForKnowledgeVideoTest extends TestBase {
     
     
     @BeforeMethod
-    public void setUp() throws IOException {
+    public void setUp() throws IOException, InterruptedException {
     	initialization();
     	pay=new Payment();
     	lp=new LandingPage();
     	coursepag=new CoursePage();
     	applyCourse=new ApplyForKnowledgeVideo();
     	lg=new Login();
+    	homepage=lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
     }
     
     @Test
     public void purchaseCourse() throws IOException, InterruptedException {
-    lp.user();
-    homepage=lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
+    //homepage=lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
     lp.course();
     coursepag.applyknowledgecourse();
     applyCourse.purchaseCourse();

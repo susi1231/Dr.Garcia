@@ -33,6 +33,7 @@ public class CoursePage extends TestBase {
 	}
 	
 	public ApplyForKnowledgeVideo applyknowledgecourse() throws IOException {
+		//Thread.sleep(6000);
 		knowledgeVideo90.click();
 		return new ApplyForKnowledgeVideo();
 	}
