@@ -41,7 +41,7 @@ public class ApplyforMainCourseTest extends TestBase{
     }
     
     @Test(invocationCount = 1)
-    public void purchaseCourse() throws IOException, InterruptedException {
+    public void MainpurchaseCourse() throws IOException, InterruptedException {
     //lp.user();
     //LoginPageTest.loginTest();
     lg.login(prop.getProperty("useremail"), prop.getProperty("password"));

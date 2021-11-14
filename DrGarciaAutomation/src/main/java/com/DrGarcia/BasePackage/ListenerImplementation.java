@@ -21,9 +21,22 @@ public class ListenerImplementation extends TestBase implements ITestListener{
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestSuccess(result);
+		String passName = result.getName();
+		//type cast the object to access the method
+		TakesScreenshot t=(TakesScreenshot) driver;
+		//take the screenshot in file format
+		File src=t.getScreenshotAs(OutputType.FILE);
+		//open the empty file in the current java project
+		File dest=new File("./PassScreenshort/"+passName+".png");
+		try {
+			//copy & paste the screenshot and save the file in the above location
+			FileUtils.copyFile(src, dest);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		driver.close();
 	}
+	
 
 	@Override
 	public void onTestFailure(ITestResult result) {
@@ -33,7 +46,7 @@ public class ListenerImplementation extends TestBase implements ITestListener{
 		//take the screenshot in file format
 		File src=t.getScreenshotAs(OutputType.FILE);
 		//open the empty file in the current java project
-		File dest=new File("./ScreenShort/"+name+".png");
+		File dest=new File("./FailScreenshort/"+name+".png");
 		try {
 			//copy & paste the screenshot and save the file in the above location
 			FileUtils.copyFile(src, dest);

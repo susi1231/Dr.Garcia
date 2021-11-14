@@ -51,7 +51,7 @@ public class LoginPageTest extends TestBase{
 	public void loginTest() throws IOException, InterruptedException {
 		homepage=lg1.login(prop.getProperty("useremail"), prop.getProperty("password"));
 		String homepageTitle=homepage.verifyHomePageTitle();
-		Assert.assertEquals(homepageTitle, "US BIOMAG | Homepage-Sushi", "title fails");
+		Assert.assertEquals(homepageTitle, "US BIOMAG | Homepage", "title fails because of Title MissMatch");
 		
 		/*
 		 * SoftAssert s=new SoftAssert();
