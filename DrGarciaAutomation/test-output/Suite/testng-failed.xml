@@ -9,6 +9,39 @@
           <include name="watch"/>
         </methods>
       </class> <!-- com.DrGarcia.UserTestScripts.WatchSessionTest -->
+      <class name="com.DrGarcia.UserTestScripts.ApplyforMainCourseTest">
+        <methods>
+          <include name="MainpurchaseCourse"/>
+          <include name="setUp"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- com.DrGarcia.UserTestScripts.ApplyforMainCourseTest -->
+      <class name="com.DrGarcia.UserTestScripts.SignupUserTest">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="signupTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.DrGarcia.UserTestScripts.SignupUserTest -->
+      <class name="com.DrGarcia.UserTestScripts.LoginPageTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="setUp"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- com.DrGarcia.UserTestScripts.LoginPageTest -->
+      <class name="com.DrGarcia.UserTestScripts.ForgotPasswordTest">
+        <methods>
+          <include name="forgotPassword"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.DrGarcia.UserTestScripts.ForgotPasswordTest -->
+      <class name="com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest">
+        <methods>
+          <include name="purchaseCourse"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
