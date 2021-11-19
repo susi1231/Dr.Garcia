@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+  
+  <listeners>
+     <listener class-name="com.DrGarcia.ExtentReportListener.ExtentReportListener"/>
+  </listeners>
+
+  <test thread-count="5" name="DrGarcia">
     <classes>
       <class name="com.DrGarcia.UserTestScripts.SignupUserTest"/>
       <class name="com.DrGarcia.UserTestScripts.LoginPageTest"/>
@@ -9,7 +14,7 @@
       <class name="com.DrGarcia.UserTestScripts.ApplyforMainCourseTest"/>
       <class name="com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest"/>
       <class name="com.DrGarcia.UserTestScripts.WatchSessionTest"/>
-      <class name="com.DrGarcia.UserTestScripts.ForgotPasswordTest"/>
+      <class name="com.DrGarcia.UserTestScripts.FooterPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

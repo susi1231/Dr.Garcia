@@ -117,12 +117,12 @@ public class SignupUser extends TestBase {
     log.regester.click();
     	//regester.click();
 	name.sendKeys("Test");
-	emailid.sendKeys("kanisiritest025@gmail.com");
+	emailid.sendKeys("kanisiritest026@gmail.com");
 	phoneNo.sendKeys("9951714865");
 	age.sendKeys("24");
 	password.sendKeys("Sushi@123");
 	confirmationPassword.sendKeys("Sushi@123");
-	Thread.sleep(3000);
+	//
 	nextButton.click();
 	address.sendKeys("california");
 	city.sendKeys("newyork");

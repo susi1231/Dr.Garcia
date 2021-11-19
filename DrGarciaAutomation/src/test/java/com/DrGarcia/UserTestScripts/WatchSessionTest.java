@@ -1,5 +1,6 @@
 package com.DrGarcia.UserTestScripts;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -47,10 +48,9 @@ public class WatchSessionTest extends TestBase {
     }
 	
 	@Test
-	public void watch() throws IOException, InterruptedException {
+	public void watch() throws IOException, InterruptedException, AWTException {
 	homepage.clickOnMycourse();
 	course.navigate();
-	Thread.sleep(3000);
 	courseDetail.playbutton();
 	
 		

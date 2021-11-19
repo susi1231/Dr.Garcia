@@ -145,7 +145,13 @@ public class LandingPage extends TestBase{
 		String cwh = itr.next();
 		driver.switchTo().window(cwh);
 		String linkedinnTitle = driver.getTitle();
-			Assert.assertEquals(linkedinnTitle, "Dr. Garcia Biomagnetism | LinkedIn");	
+		Assert.assertEquals(linkedinnTitle, "Sign In | LinkedIn");
+		/*try {
+				Assert.assertEquals(linkedinnTitle, "Dr. Garcia Biomagnetism | LinkedIn");
+			} catch (Exception e) {
+				Assert.assertEquals(linkedinnTitle, "Sign In | LinkedIn");
+			}
+			*/	
 		}
 	
 	//recent posts

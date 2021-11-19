@@ -34,17 +34,6 @@ public class SignupUserTest extends TestBase{
 		Assert.assertEquals(title, "Meet My Service");
 	}
 	*/
-	
-	
-	/*@Test(priority = 1)
-	public void loginTest() throws IOException, InterruptedException {
-		homepage=lg1.login(prop.getProperty("useremail"), prop.getProperty("password"));
-		
-		
-		
-		
-	}
-	*/
 	@Test
 	public void signupTest() throws InterruptedException, IOException {
 		sign.Signup();
@@ -58,6 +47,6 @@ public class SignupUserTest extends TestBase{
 	
 	@AfterMethod
 	public void closebrowser() {
-		//driver.quit();
+		driver.quit();
 	}
 }

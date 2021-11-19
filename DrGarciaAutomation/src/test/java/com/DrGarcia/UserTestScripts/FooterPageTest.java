@@ -45,37 +45,37 @@ public class FooterPageTest extends TestBase{
     	homepage=lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
     }
 	
-	@Test()
+	@Test(priority =1)
 	public void newsLetter() {
 	lp.testNewsletter();
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void checkFacebooklink() {
 		lp.footerFacebook();
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void checkLinkedinnLink() {
 		lp.linkedInn();
 	}
 	
-	@Test
+	@Test(priority = 7)
 	public void recentPost() {
 		lp.recentPosts();
 	}
 	
-	@Test
+	@Test(priority = 4)
 	public void privacyPolicy() {
 		lp.privacyPolicy();
 	}
 	
-	@Test
+	@Test(priority = 5)
 	public void termsConditions() {
 		lp.termsConditions();
 	}
 	
-	@Test
+	@Test(priority = 6)
 	public void poweredByHelenzys() {
 		lp.poweredByHelenzys();
 	}

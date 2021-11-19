@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.DrGarcia.ExtentReportListener.ExtentReportListener"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.DrGarcia.UserTestScripts.WatchSessionTest">
+      <class name="com.DrGarcia.UserTestScripts.FooterPageTest">
         <methods>
+          <include name="checkFacebooklink"/>
+          <include name="close"/>
+          <include name="checkLinkedinnLink"/>
           <include name="setUp"/>
-          <include name="watch"/>
+          <include name="newsLetter"/>
         </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.WatchSessionTest -->
+      </class> <!-- com.DrGarcia.UserTestScripts.FooterPageTest -->
       <class name="com.DrGarcia.UserTestScripts.ApplyforMainCourseTest">
         <methods>
           <include name="MainpurchaseCourse"/>
@@ -16,32 +22,6 @@
           <include name="close"/>
         </methods>
       </class> <!-- com.DrGarcia.UserTestScripts.ApplyforMainCourseTest -->
-      <class name="com.DrGarcia.UserTestScripts.SignupUserTest">
-        <methods>
-          <include name="closebrowser"/>
-          <include name="signupTest"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.SignupUserTest -->
-      <class name="com.DrGarcia.UserTestScripts.LoginPageTest">
-        <methods>
-          <include name="loginTest"/>
-          <include name="setUp"/>
-          <include name="closebrowser"/>
-        </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.LoginPageTest -->
-      <class name="com.DrGarcia.UserTestScripts.ForgotPasswordTest">
-        <methods>
-          <include name="forgotPassword"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.ForgotPasswordTest -->
-      <class name="com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest">
-        <methods>
-          <include name="purchaseCourse"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
