@@ -49,9 +49,8 @@ public class WatchSessionTest extends TestBase {
 	@Test
 	public void watch() throws IOException, InterruptedException {
 	homepage.clickOnMycourse();
-	Thread.sleep(5000);
 	course.navigate();
-	Thread.sleep(5000);
+	Thread.sleep(3000);
 	courseDetail.playbutton();
 	
 		

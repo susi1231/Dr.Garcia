@@ -22,9 +22,6 @@ public class LoginPageTest extends TestBase{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-
 	public static Login lg1;
 	static HomePage homepage;
 	/*static {
