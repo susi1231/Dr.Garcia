@@ -63,9 +63,7 @@ public class Login extends TestBase {
 		//JavascriptExecutor js = (JavascriptExecutor)driver;
     	//js.executeScript("arguments[0].click();", emailType);
 		emailType.sendKeys(email);
-		Thread.sleep(3000);
 		passwordType.sendKeys(password);
-		Thread.sleep(3000);
 		loginButton.click();
 		    	//JavascriptExecutor js = (JavascriptExecutor)driver;
 		    	//js.executeScript("arguments[0].click();", loginBtn);

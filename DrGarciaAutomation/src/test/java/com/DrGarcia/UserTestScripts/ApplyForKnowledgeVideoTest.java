@@ -21,7 +21,7 @@ public class ApplyForKnowledgeVideoTest extends TestBase {
 	}
 	
 	public static Payment pay;
-    public static CoursePage coursepag;
+    public static CoursePage coursepage;
     public static ApplyForKnowledgeVideo applyCourse;
     public static LandingPage lp;
     public static Login lg;
@@ -33,17 +33,18 @@ public class ApplyForKnowledgeVideoTest extends TestBase {
     	initialization();
     	pay=new Payment();
     	lp=new LandingPage();
-    	coursepag=new CoursePage();
+    	coursepage=new CoursePage();
     	applyCourse=new ApplyForKnowledgeVideo();
     	lg=new Login();
     	homepage=lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
     }
     
     @Test
-    public void purchaseCourse() throws IOException, InterruptedException {
-    //homepage=lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
+    public void purchaseKnowledgeCourse() throws IOException, InterruptedException {
+    Thread.sleep(3000);
     lp.course();
-    coursepag.applyknowledgecourse();
+    Thread.sleep(3000);
+    coursepage.applyknowledgecourse();
     applyCourse.purchaseCourse();
     pay.payment();
    

@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.DrGarcia.ExtentReportListener.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.DrGarcia.UserTestScripts.FooterPageTest">
+      <class name="com.DrGarcia.UserTestScripts.MyAccountTest">
         <methods>
-          <include name="checkFacebooklink"/>
-          <include name="close"/>
-          <include name="checkLinkedinnLink"/>
           <include name="setUp"/>
-          <include name="newsLetter"/>
+          <include name="changePasswordTest"/>
         </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.FooterPageTest -->
-      <class name="com.DrGarcia.UserTestScripts.ApplyforMainCourseTest">
-        <methods>
-          <include name="MainpurchaseCourse"/>
-          <include name="setUp"/>
-          <include name="close"/>
-        </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.ApplyforMainCourseTest -->
+      </class> <!-- com.DrGarcia.UserTestScripts.MyAccountTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

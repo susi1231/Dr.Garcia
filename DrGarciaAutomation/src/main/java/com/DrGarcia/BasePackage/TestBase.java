@@ -57,6 +57,7 @@ public class TestBase {
 	 }
 	 */
 	
+	
 	public void SelectOption(WebElement element, int index) {
 		Select s=new Select(element);
 		s.selectByIndex(index);
@@ -67,6 +68,15 @@ public class TestBase {
 		Select s=new Select(element);
 		s.selectByVisibleText(text);
 				
+	}
+	
+	public String getPropertyValue(String key) throws IOException {
+		FileInputStream fis=new FileInputStream("C:\\Users\\kalyan\\git\\Automation\\Dr.Garcia\\DrGarciaAutomation\\src\\main\\java\\com\\DrGarcia\\Config\\config.properties");
+		Properties p=new Properties();
+		p.load(fis);
+		String value=p.getProperty(key);
+	    return value;
+		
 	}
 	   
 	/*public static void clickById(WebDriver driver, String id) {

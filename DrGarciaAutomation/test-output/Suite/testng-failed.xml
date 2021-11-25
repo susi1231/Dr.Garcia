@@ -4,11 +4,22 @@
   <listeners>
     <listener class-name="com.DrGarcia.ExtentReportListener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="DrGarcia(failed)">
     <classes>
+      <class name="com.DrGarcia.UserTestScripts.MyAccountTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="userCheck"/>
+        </methods>
+      </class> <!-- com.DrGarcia.UserTestScripts.MyAccountTest -->
+      <class name="com.DrGarcia.UserTestScripts.WatchSessionTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="watch"/>
+        </methods>
+      </class> <!-- com.DrGarcia.UserTestScripts.WatchSessionTest -->
       <class name="com.DrGarcia.UserTestScripts.FooterPageTest">
         <methods>
-          <include name="checkFacebooklink"/>
           <include name="close"/>
           <include name="checkLinkedinnLink"/>
           <include name="setUp"/>
@@ -23,5 +34,5 @@
         </methods>
       </class> <!-- com.DrGarcia.UserTestScripts.ApplyforMainCourseTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- DrGarcia(failed) -->
 </suite> <!-- Failed suite [Suite] -->

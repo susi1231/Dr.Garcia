@@ -101,8 +101,7 @@ public class LandingPage extends TestBase{
 		
 	public Login user() throws IOException {
 		Actions act=new Actions(driver);
-		act.moveToElement(userIcon).perform();
-		act.doubleClick(userIcon).perform();
+		act.moveToElement(userIcon).click().perform();
 	    //userIcon.click();
 		return new Login();
 	}
@@ -217,5 +216,9 @@ public class LandingPage extends TestBase{
 		//System.out.println(recentpost);
 	}
 	*/
+	//Client Testimonals videos
+	@FindBy(xpath = "//label[@id='slide4']/img")
+	WebElement TestimonalVideo2;
+	
 	
 }

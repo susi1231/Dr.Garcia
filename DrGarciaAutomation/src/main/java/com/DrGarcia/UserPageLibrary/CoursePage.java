@@ -3,6 +3,7 @@ package com.DrGarcia.UserPageLibrary;
 import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -28,7 +29,9 @@ public class CoursePage extends TestBase {
 	
 	
 	public ApplyForMainCourse applycourse() throws IOException {
-		applyCourse.click();
+		Actions act=new Actions(driver);
+		act.moveToElement(applyCourse).perform();
+		//applyCourse.click();
 		return new ApplyForMainCourse();
 	}
 	

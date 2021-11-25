@@ -111,17 +111,17 @@ public class SignupUser extends TestBase {
   	WebElement regester;
   	*/
     
-    public void Signup() throws InterruptedException, IOException {
+    public void Signup(String signupName, String signupEmail, String signupPhone, String signupAge, String signupPassword, String signupConfirmPassword) throws InterruptedException, IOException {
     lp.user();
     //lp.userIcon.click();
     log.regester.click();
     	//regester.click();
-	name.sendKeys("Test");
-	emailid.sendKeys("kanisiritest026@gmail.com");
-	phoneNo.sendKeys("9951714865");
-	age.sendKeys("24");
-	password.sendKeys("Sushi@123");
-	confirmationPassword.sendKeys("Sushi@123");
+	name.sendKeys(signupName);
+	emailid.sendKeys(signupEmail);
+	phoneNo.sendKeys(signupPhone);
+	age.sendKeys(signupAge);
+	password.sendKeys(signupPassword);
+	confirmationPassword.sendKeys(signupConfirmPassword);
 	//
 	nextButton.click();
 	address.sendKeys("california");

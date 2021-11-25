@@ -36,7 +36,7 @@ public class SignupUserTest extends TestBase{
 	*/
 	@Test
 	public void signupTest() throws InterruptedException, IOException {
-		sign.Signup();
+		sign.Signup(prop.getProperty("signupName"), prop.getProperty("signupEmail"), prop.getProperty("signupPhone"), prop.getProperty("signupAge"), prop.getProperty("signupPassword"), prop.getProperty("signupConfirmPassword"));
 		
 	}
 	

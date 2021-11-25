@@ -2,24 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46533" started-at="2021-11-20T11:23:42 IST" finished-at="2021-11-20T11:24:29 IST">
+  <suite name="Default suite" duration-ms="45942" started-at="2021-11-25T18:34:05 IST" finished-at="2021-11-25T18:34:51 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46533" started-at="2021-11-20T11:23:42 IST" finished-at="2021-11-20T11:24:29 IST">
-      <class name="com.DrGarcia.UserTestScripts.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.DrGarcia.UserTestScripts.LoginPageTest@75881071]" name="setUp" is-config="true" duration-ms="13814" started-at="2021-11-20T11:23:42 IST" finished-at="2021-11-20T11:23:56 IST">
+    <test name="Default test" duration-ms="45942" started-at="2021-11-25T18:34:05 IST" finished-at="2021-11-25T18:34:51 IST">
+      <class name="com.DrGarcia.UserTestScripts.MyAccountTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.DrGarcia.UserTestScripts.MyAccountTest@7403c468]" name="setUp" is-config="true" duration-ms="32381" started-at="2021-11-25T18:34:05 IST" finished-at="2021-11-25T18:34:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.DrGarcia.UserTestScripts.LoginPageTest@75881071]" name="loginTest" duration-ms="17818" started-at="2021-11-20T11:23:56 IST" finished-at="2021-11-20T11:24:14 IST">
+        <test-method status="PASS" signature="userCheck()[pri:1, instance:com.DrGarcia.UserTestScripts.MyAccountTest@7403c468]" name="userCheck" duration-ms="13524" started-at="2021-11-25T18:34:38 IST" finished-at="2021-11-25T18:34:51 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="closebrowser()[pri:0, instance:com.DrGarcia.UserTestScripts.LoginPageTest@75881071]" name="closebrowser" is-config="true" duration-ms="633" started-at="2021-11-20T11:24:28 IST" finished-at="2021-11-20T11:24:29 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closebrowser -->
-      </class> <!-- com.DrGarcia.UserTestScripts.LoginPageTest -->
+        </test-method> <!-- userCheck -->
+      </class> <!-- com.DrGarcia.UserTestScripts.MyAccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,6 +3,7 @@ package com.DrGarcia.UserPageLibrary;
 import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -40,9 +41,12 @@ public class HomePage extends TestBase {
 	WebElement userNameLabel;
 	
 	//going inside myaccount
-	public MyAccount clickOnMyAccount() {
-		landPage.userIcon.click();
-		myAccount.click();
+	public MyAccount clickOnMyAccount() throws IOException {
+		//landPage.userIcon.click();
+		landPage.user();
+		Actions actcamera=new Actions(driver);
+		actcamera.moveToElement(myAccount).click().perform();
+		//myAccount.click();
 		return new MyAccount();
 		
 	}

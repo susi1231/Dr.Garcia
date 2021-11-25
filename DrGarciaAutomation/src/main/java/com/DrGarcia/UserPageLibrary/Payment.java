@@ -40,7 +40,7 @@ public class Payment extends TestBase {
 	WebElement expiryYear;
 	
 	//BUtton for confirm payment 
-	@FindBy(xpath = "//button[@class='btn btn-success themeButton']")
+	@FindBy(xpath = "//button[@id='confirm-purchase']")
 	WebElement confirmPayment;
 	
 	////div[@id='cover']/../..//div[@class='form-group']/button
@@ -63,8 +63,9 @@ public class Payment extends TestBase {
 	cardName.sendKeys("4111 1111 1111 1111");
 	SelectOption(expiryMonth, "Nov");
 	SelectOption(expiryYear, "2023");
+	
 	Actions act=new Actions(driver);
-	act.moveToElement(confirmPayment).click().build().perform();
+	act.moveToElement(confirmPayment).click().perform();
 	//confirmPayment.click();
     //softAssert.assertEquals(comparePaymentMessage, "payment-complete");
 	//Assert.assertEquals(comparePaymentMessage, "PAYMENT-COMPLETE");

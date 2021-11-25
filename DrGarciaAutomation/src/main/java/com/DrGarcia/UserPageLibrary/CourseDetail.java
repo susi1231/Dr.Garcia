@@ -53,7 +53,7 @@ public class CourseDetail extends TestBase {
 	public void playbutton() throws InterruptedException, AWTException {
 	//driver.switchTo().frame(frame);
 	driver.navigate().refresh();
-	driver.switchTo().frame("maincourse");
+	driver.switchTo().frame("mai ncourse");
 	//Thread.sleep(6000);
 	//WebDriverWait wait=new WebDriverWait(driver, 10);
 	//wait.until(ExpectedConditions.
@@ -62,6 +62,7 @@ public class CourseDetail extends TestBase {
     Robot r=new Robot();
     r.keyPress(KeyEvent.VK_SPACE);                                                                               
     r.keyRelease(KeyEvent.VK_SPACE);
+   // driver.findElement(By.xpath("//div[.='11:08']")).click(); 
 	/*
 	try {
 		act.moveToElement(playButton).click().perform();

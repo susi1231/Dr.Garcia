@@ -31,20 +31,18 @@ public class ApplyforMainCourseTest extends TestBase{
     
     
     @BeforeMethod
-    public void setUp() throws IOException {
+    public void setUp() throws IOException, InterruptedException {
     	initialization();
     	pay=new Payment();
     	lp=new LandingPage();
     	coursepag=new CoursePage();
     	applyCourse=new ApplyForMainCourse();
     	lg=new Login();
+    	lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
     }
     
     @Test(invocationCount = 1)
     public void MainpurchaseCourse() throws IOException, InterruptedException {
-    //lp.user();
-    //LoginPageTest.loginTest();
-    lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
     lp.course();
     coursepag.applycourse();
     applyCourse.purchaseCourse();

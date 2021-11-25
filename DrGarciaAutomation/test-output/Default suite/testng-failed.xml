@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.DrGarcia.UserTestScripts.WatchSessionTest">
+      <class name="com.DrGarcia.UserTestScripts.MyAccountTest">
         <methods>
           <include name="setUp"/>
-          <include name="watch"/>
+          <include name="changePasswordTest"/>
         </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.WatchSessionTest -->
+      </class> <!-- com.DrGarcia.UserTestScripts.MyAccountTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
