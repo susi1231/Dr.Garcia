@@ -52,7 +52,8 @@ public class HomePage extends TestBase {
 	}
 	//going inside mycourse
 	public MyCourse clickOnMycourse() throws IOException {
-		landPage.userIcon.click();
+		//landPage.userIcon.click();
+		landPage.user();
 		myCourse.click();
 		return new MyCourse();
 		

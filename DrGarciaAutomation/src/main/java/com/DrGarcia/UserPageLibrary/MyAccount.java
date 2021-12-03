@@ -142,7 +142,9 @@ public class MyAccount extends TestBase{
     //logout method
     public LandingPage logoutUser() throws IOException {
     	landpage.user();
-    	logout.click();
+    	Actions actcamera=new Actions(driver);
+		actcamera.moveToElement(logout).click().perform();
+    	//logout.click();
     	return new LandingPage();
     }
 

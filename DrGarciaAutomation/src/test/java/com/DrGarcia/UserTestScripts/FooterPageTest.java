@@ -45,20 +45,21 @@ public class FooterPageTest extends TestBase{
     	homepage=lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
     }
 	
+	@Test(priority = 3)
+	public void checkYoutubeLink() throws InterruptedException {
+		lp.youtube();
+	}
+	
 	@Test(priority =1)
 	public void newsLetter() {
 	lp.testNewsletter();
 	}
 	
 	@Test(priority = 2)
-	public void checkFacebooklink() {
+	public void checkFacebooklink() throws InterruptedException {
 		lp.footerFacebook();
 	}
 	
-	@Test(priority = 3)
-	public void checkLinkedinnLink() {
-		lp.linkedInn();
-	}
 	
 	@Test(priority = 7)
 	public void recentPost() {
@@ -84,4 +85,5 @@ public class FooterPageTest extends TestBase{
 	public void close() {
 		driver.quit();
 	}
+	
 }

@@ -14,7 +14,6 @@
       <class name="com.DrGarcia.UserTestScripts.ApplyforMainCourseTest"/>
       <class name="com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest"/>
       <class name="com.DrGarcia.UserTestScripts.WatchSessionTest"/>
-      
       <class name="com.DrGarcia.UserTestScripts.FooterPageTest"/>
       <class name="com.DrGarcia.UserTestScripts.MyAccountTest"/>
     </classes>

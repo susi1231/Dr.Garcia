@@ -125,33 +125,35 @@ public class LandingPage extends TestBase{
 	}
 	
 		
-	public void footerFacebook() {
+	public void footerFacebook() throws InterruptedException {
 	facebook.click();
 	Set<String> allwh = driver.getWindowHandles();
 	Iterator<String> itr = allwh.iterator();
 	String pwh = itr.next();
 	String cwh = itr.next();
+	Thread.sleep(3000);
 	driver.switchTo().window(cwh);
 	String facebookTitle = driver.getTitle();
 	Assert.assertEquals(facebookTitle, "American Biomagnetism- Usbiomag.com - Home | Facebook");
 	}
 	
-	public void linkedInn() {
-		linkedinn.click();
+	public void youtube() throws InterruptedException {
+		//linkedinn.click();
+		youtube.click();
 		Set<String> allwh = driver.getWindowHandles();
 		Iterator<String> itr = allwh.iterator();
 		String pwh = itr.next();
 		String cwh = itr.next();
+		Thread.sleep(3000);
 		driver.switchTo().window(cwh);
-		String linkedinnTitle = driver.getTitle();
-		Assert.assertEquals(linkedinnTitle, "Sign In | LinkedIn");
-		/*try {
-				Assert.assertEquals(linkedinnTitle, "Dr. Garcia Biomagnetism | LinkedIn");
-			} catch (Exception e) {
-				Assert.assertEquals(linkedinnTitle, "Sign In | LinkedIn");
-			}
-			*/	
+		String youtubeTitle = driver.getTitle();
+		Assert.assertEquals(youtubeTitle, "Dr. Garcia- Biomagnetism - YouTube");		
 		}
+	//youtube webelement
+	@FindBy(xpath = "//i[@class='fa fa-youtube-play']")
+	WebElement youtube;
+		
+		
 	
 	//recent posts
 	@FindBy(xpath = "//div[@class='show-featured clearfix']/div[2]//a")
@@ -217,8 +219,8 @@ public class LandingPage extends TestBase{
 	}
 	*/
 	//Client Testimonals videos
+		
 	@FindBy(xpath = "//label[@id='slide4']/img")
 	WebElement TestimonalVideo2;
+	}
 	
-	
-}

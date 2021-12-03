@@ -29,14 +29,14 @@ public class MyAccountTest extends TestBase{
     	account=new MyAccount();
     	homepage=lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
     }
-	/*
+	
 	@Test(priority = 2)
 	public void changePasswordTest() throws IOException, InterruptedException {
 	homepage.clickOnMyAccount();
 	account.changePassword(prop.getProperty("password"), prop.getProperty("newpassword"));
 	account.logoutUser();
 	}
-	*/
+	
 	
 	@Test(priority = 1)
 	public void userCheck() throws AWTException, IOException, InterruptedException {
@@ -45,6 +45,7 @@ public class MyAccountTest extends TestBase{
 		account.profilePic();
 		
 	}
+	
 	
 	
 

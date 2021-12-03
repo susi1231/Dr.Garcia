@@ -53,7 +53,7 @@ public class CourseDetail extends TestBase {
 	public void playbutton() throws InterruptedException, AWTException {
 	//driver.switchTo().frame(frame);
 	driver.navigate().refresh();
-	driver.switchTo().frame("mai ncourse");
+	driver.switchTo().frame("maincourse");
 	//Thread.sleep(6000);
 	//WebDriverWait wait=new WebDriverWait(driver, 10);
 	//wait.until(ExpectedConditions.

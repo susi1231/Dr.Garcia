@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -35,6 +36,28 @@ public class TestBase {
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 		driver=new ChromeDriver();
 	}
+	else if(browserName.equals("FF")){
+		System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");	
+		driver = new FirefoxDriver(); 
+	}
+	/*
+	public static void initialization() {
+		String browserName=prop.getProperty("browser");
+	if (browserName.equals("chrome")) {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		driver=new ChromeDriver();
+	}
+	*/
+	/*
+	public static void initialization() {
+		String browserName=prop.getProperty("browser");
+	if (browserName.equals("chrome")) {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		driver=new ChromeDriver();
+	}
+	*/
+	
+	
 	driver.manage().window().maximize();
 	driver.manage().deleteAllCookies();
 	driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);

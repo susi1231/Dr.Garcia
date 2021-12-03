@@ -6,33 +6,14 @@
   </listeners>
   <test thread-count="5" name="DrGarcia(failed)">
     <classes>
-      <class name="com.DrGarcia.UserTestScripts.MyAccountTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="userCheck"/>
-        </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.MyAccountTest -->
-      <class name="com.DrGarcia.UserTestScripts.WatchSessionTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="watch"/>
-        </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.WatchSessionTest -->
       <class name="com.DrGarcia.UserTestScripts.FooterPageTest">
         <methods>
+          <include name="checkFacebooklink"/>
           <include name="close"/>
-          <include name="checkLinkedinnLink"/>
           <include name="setUp"/>
           <include name="newsLetter"/>
         </methods>
       </class> <!-- com.DrGarcia.UserTestScripts.FooterPageTest -->
-      <class name="com.DrGarcia.UserTestScripts.ApplyforMainCourseTest">
-        <methods>
-          <include name="MainpurchaseCourse"/>
-          <include name="setUp"/>
-          <include name="close"/>
-        </methods>
-      </class> <!-- com.DrGarcia.UserTestScripts.ApplyforMainCourseTest -->
     </classes>
   </test> <!-- DrGarcia(failed) -->
 </suite> <!-- Failed suite [Suite] -->

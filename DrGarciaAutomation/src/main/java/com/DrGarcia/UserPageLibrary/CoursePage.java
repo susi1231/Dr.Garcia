@@ -29,9 +29,9 @@ public class CoursePage extends TestBase {
 	
 	
 	public ApplyForMainCourse applycourse() throws IOException {
-		Actions act=new Actions(driver);
-		act.moveToElement(applyCourse).perform();
-		//applyCourse.click();
+		//Actions act=new Actions(driver);
+		//act.moveToElement(applyCourse).perform();
+		applyCourse.click();
 		return new ApplyForMainCourse();
 	}
 	

@@ -6,7 +6,7 @@
       <class name="com.DrGarcia.UserTestScripts.MyAccountTest">
         <methods>
           <include name="setUp"/>
-          <include name="changePasswordTest"/>
+          <include name="userCheck"/>
         </methods>
       </class> <!-- com.DrGarcia.UserTestScripts.MyAccountTest -->
     </classes>
