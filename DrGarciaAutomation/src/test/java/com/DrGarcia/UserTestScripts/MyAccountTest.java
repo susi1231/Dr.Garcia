@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.DrGarcia.BasePackage.TestBase;
@@ -12,6 +13,7 @@ import com.DrGarcia.UserPageLibrary.HomePage;
 import com.DrGarcia.UserPageLibrary.Login;
 import com.DrGarcia.UserPageLibrary.MyAccount;
 
+@Listeners(com.DrGarcia.BasePackage.ListenerImplementation.class)
 public class MyAccountTest extends TestBase{
 
 	public MyAccountTest() throws IOException {
@@ -43,7 +45,7 @@ public class MyAccountTest extends TestBase{
 		homepage.clickOnMyAccount();
 		account.changeUser(prop.getProperty("changeUserName"));
 		account.profilePic();
-		
+
 	}
 	
 	

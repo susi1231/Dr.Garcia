@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.DrGarcia.BasePackage.TestBase;
@@ -16,6 +17,7 @@ import com.DrGarcia.UserPageLibrary.Login;
 import com.DrGarcia.UserPageLibrary.MyCourse;
 import com.DrGarcia.UserPageLibrary.Payment;
 
+@Listeners(com.DrGarcia.BasePackage.ListenerImplementation.class)
 public class FooterPageTest extends TestBase{
 
 	public FooterPageTest() throws IOException {
@@ -32,6 +34,8 @@ public class FooterPageTest extends TestBase{
     public static MyCourse course;
     public static CourseDetail courseDetail;
     
+    
+    
 	@BeforeMethod
     public void setUp() throws IOException, InterruptedException {
     	initialization();
@@ -43,6 +47,7 @@ public class FooterPageTest extends TestBase{
     	course=new MyCourse();
     	courseDetail=new CourseDetail();
     	homepage=lg.login(prop.getProperty("useremail"), prop.getProperty("password"));
+    	Thread.sleep(4000);
     }
 	
 	@Test(priority = 3)
@@ -50,9 +55,14 @@ public class FooterPageTest extends TestBase{
 		lp.youtube();
 	}
 	
+	@Test(priority = 7)
+	public void recentPost() {
+		lp.recentPosts();
+	}
+	
 	@Test(priority =1)
 	public void newsLetter() {
-	lp.testNewsletter();
+	lp.testNewsletter(prop.getProperty("useremail"));
 	}
 	
 	@Test(priority = 2)
@@ -60,11 +70,6 @@ public class FooterPageTest extends TestBase{
 		lp.footerFacebook();
 	}
 	
-	
-	@Test(priority = 7)
-	public void recentPost() {
-		lp.recentPosts();
-	}
 	
 	@Test(priority = 4)
 	public void privacyPolicy() {
@@ -81,9 +86,7 @@ public class FooterPageTest extends TestBase{
 		lp.poweredByHelenzys();
 	}
 	
-	@AfterMethod
-	public void close() {
-		driver.quit();
-	}
+	
+	
 	
 }

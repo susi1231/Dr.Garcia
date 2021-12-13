@@ -55,19 +55,9 @@ public class Login extends TestBase {
 	
 	public HomePage login(String email, String password) throws IOException, InterruptedException{
 		lp.user();
-		//lp.userIcon.click();
-		//lp.userIcon.click();
-		/*JavascriptExecutor js = (JavascriptExecutor)driver;
-    	js.executeScript("arguments[0].click();", lp.user());
-    	*/
-		//JavascriptExecutor js = (JavascriptExecutor)driver;
-    	//js.executeScript("arguments[0].click();", emailType);
 		emailType.sendKeys(email);
 		passwordType.sendKeys(password);
 		loginButton.click();
-		    	//JavascriptExecutor js = (JavascriptExecutor)driver;
-		    	//js.executeScript("arguments[0].click();", loginBtn);
-		    	
 		return new HomePage();
 	}
 	
@@ -75,6 +65,7 @@ public class Login extends TestBase {
 		forgotPassword.click();
 		return new ForgotPassword();
 	}
+	
     
 	
 }

@@ -34,7 +34,7 @@ public class ListenerImplementation extends TestBase implements ITestListener{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		driver.close();
+		driver.quit();
 	}
 	
 

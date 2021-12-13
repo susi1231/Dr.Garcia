@@ -140,7 +140,8 @@ public class MyAccount extends TestBase{
     WebElement logout;
     
     //logout method
-    public LandingPage logoutUser() throws IOException {
+    public LandingPage logoutUser() throws IOException, InterruptedException {
+    	Thread.sleep(4000);
     	landpage.user();
     	Actions actcamera=new Actions(driver);
 		actcamera.moveToElement(logout).click().perform();

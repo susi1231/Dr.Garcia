@@ -38,7 +38,7 @@ public class ForgotPasswordTest extends TestBase{
 	public void forgotPassword() throws IOException {
 		landPage.user();
 		lg1.forgot();
-		forgot.forgotClick();
+		forgot.forgotClick(prop.getProperty("useremail"));
 		
 	}
 }

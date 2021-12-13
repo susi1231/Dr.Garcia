@@ -24,8 +24,8 @@ public class ForgotPassword extends TestBase{
     WebElement submitButton;
 	
 	//
-	public void forgotClick() {
-		email.sendKeys("kanisiritest017@gmail.com");
+	public void forgotClick(String useremail) {
+		email.sendKeys(useremail);
 		submitButton.click();
 	}
 }

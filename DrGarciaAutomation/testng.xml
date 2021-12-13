@@ -6,7 +6,7 @@
      <listener class-name="com.DrGarcia.ExtentReportListener.ExtentReportListener"/>
   </listeners>
 
-  <test thread-count="5" name="DrGarcia">
+  <test thread-count="10" name="DrGarcia">
     <classes>
       <class name="com.DrGarcia.UserTestScripts.SignupUserTest"/>
       <class name="com.DrGarcia.UserTestScripts.LoginPageTest"/>
@@ -15,6 +15,8 @@
       <class name="com.DrGarcia.UserTestScripts.ApplyForKnowledgeVideoTest"/>
       <class name="com.DrGarcia.UserTestScripts.WatchSessionTest"/>
       <class name="com.DrGarcia.UserTestScripts.FooterPageTest"/>
+      <class name="com.DrGarcia.UserTestScripts.ContactPageTest"/>
+      <class name="com.DrGarcia.UserTestScripts.AboutUsTest"/>
       <class name="com.DrGarcia.UserTestScripts.MyAccountTest"/>
     </classes>
   </test> <!-- Test -->

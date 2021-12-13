@@ -107,9 +107,20 @@ public class LandingPage extends TestBase{
 	}
 	
 	public CoursePage course() throws IOException {
-		dots.click();
+		Actions act=new Actions(driver);
+		act.moveToElement(dots).click().perform();
+		//dots.click();
 		course.click();
 		return new CoursePage();
+	}
+	
+	public AboutUs AboutUspage() throws IOException {
+		Actions act=new Actions(driver);
+		act.moveToElement(dots).click().perform();
+		
+		//dots.click();
+		aboutUs.click();
+		return new AboutUs();
 	}
 	
 	public void logoFooter() {
@@ -117,8 +128,16 @@ public class LandingPage extends TestBase{
 		
 	}
 	
-	public void testNewsletter() {
-		newsletterEmail.sendKeys("kanisirisushi1291@gmail.com");
+	public ContactUs contact() throws IOException {
+		Actions act=new Actions(driver);
+		act.moveToElement(dots).click().perform();
+		//dots.click();
+		contactUs.click();
+		return new ContactUs();
+	}
+	
+	public void testNewsletter(String useremail) {
+		newsletterEmail.sendKeys(useremail);
 		newsletterSubmit.click();
 		String message=thanksMessage.getText();
 		Assert.assertEquals(message, "Thanks for your subscribtion", "failed due to You are Already Subscribed");
@@ -160,9 +179,10 @@ public class LandingPage extends TestBase{
 	WebElement recentPosts; 
 	
 	public void recentPosts() {
-		String recentpostLandingpage=recentPosts.getText();
+		//String recentpostLandingpage=recentPosts.getText();
 		recentPosts.click();
-		Assert.assertEquals(recentpostTitle, recentpostTitle);
+		String recentposts=driver.getTitle();
+		Assert.assertEquals(recentposts, "US BIOMAG | ARTICLE");
 		//System.out.println(recentpost);
 	}
 	
@@ -218,9 +238,48 @@ public class LandingPage extends TestBase{
 		//System.out.println(recentpost);
 	}
 	*/
+	
 	//Client Testimonals videos
+	@FindBy(xpath = "(//i[@class='fa fa-play-circle fa-4x vimeo-circle'])[3]")
+	WebElement testimonalVideoPlay;
+	
+	//cleient Testimonal frame video
+	@FindBy(xpath = "(//iframe[@title='vimeo-player'])[3]")
+	WebElement testmonalIframe;
+	
+	
+	public void testimonalPlay() throws InterruptedException {
+		/*
+		//firstTestimonal.click();
+		Actions act=new Actions(driver);
+		act.moveToElement(firstTestimonal).click().perform();
+		//testimonalVideoPlay.click();
+		Actions act1=new Actions(driver);
+		act1.moveToElement(testimonalVideoPlay).click().perform();
+		driver.switchTo().frame(testmonalIframe);
+		frame.click();
+		*/
+		Actions act=new Actions(driver);
+		act.moveToElement(thirdTestimonal).click().perform();
+		Actions act1=new Actions(driver);
+		act1.moveToElement(testimonalVideoPlay).click().perform();
+		driver.switchTo().frame(testmonalIframe);
+		Thread.sleep(5000);
+		Actions act2=new Actions(driver);
+		act2.moveToElement(frameplay).click().perform();
+		//frame.click();
 		
-	@FindBy(xpath = "//label[@id='slide4']/img")
-	WebElement TestimonalVideo2;
+	}
+	@FindBy(xpath = "//div[@class='vp-controls']/button/div[1]")
+	WebElement frameplay;
+	
+	//play first testimonal 
+	@FindBy(xpath = "//label[@id='slide1']/img")
+	WebElement firstTestimonal;
+	
+	//dummy data to test
+	@FindBy(xpath = "//label[@id='slide3']/img")
+	WebElement thirdTestimonal;
+	
 	}
 	
